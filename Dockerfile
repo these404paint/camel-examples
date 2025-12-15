@@ -12,4 +12,4 @@ WORKDIR /app
 COPY --from=build /build/resume-api/resume-api-fileset/target/*jar app.jar
 
 EXPOSE 8080
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-cp", "app.jar", "org.apache.camel.main.Main"]
