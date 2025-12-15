@@ -11,7 +11,7 @@ FROM eclipse-temurin:17-jre
 WORKDIR /app
 
 # copy the built jar
-COPY --from=build /build/resume-api/target/*jar app.jar
+COPY --from=build /build/resume-api/resume-api-backend/target/*jar app.jar
 
 EXPOSE 8080
 CMD ["java", "-jar", "app.jar"]
